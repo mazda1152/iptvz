@@ -11,7 +11,7 @@ if [ $# -eq 0 ]; then
 
   if [ -z "$city_choice" ]; then
       echo "未检测到输入,默认测试全部"
-      city_choice=0
+      city_choice=12
   fi
 
 else
@@ -71,6 +71,7 @@ case $city_choice in
     12)
         city="陕西电信"
         stream="rtp/239.111.205.35:5140"
+	stream="udp/239.112.205.59:5140"
         ;;
     0)
         # 逐个处理{ }内每个选项
